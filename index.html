@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP Learning</title>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div id="page1">
-      <div id="pageBox"></div>
-      <div id="headings">
-        <h1 id="h1">I am h1</h1>
-        <h2 id="h2">I am h2</h2>
-        <h3 id="h3">I am h3</h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSAP Learning</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="main">
+      <div id="page1">
+        <h1>Hello</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro in sint quis sapiente perferendis
+          aspernatur ducimus, sed alias! Eligendi laborum numquam deleniti ex doloremque labore itaque accusantium aut
+          expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur quisquam eligendi
+          itaque porro facere cupiditate qui harum illum, quia accusantium. Dolor unde repellat autem neque esse
+          dignissimos, commodi amet!</p>
       </div>
+      <div id="page2">
+        <div id="box2"></div>
+      </div>
+      <div id="page3"></div>
     </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+  integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+  integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="./script.js"></script>
 
-    <div id="page2">
-      <!-- <div id="box"></div> -->
-      <h1>Vinay Developer</h1>
-    </div>
-
-    <div id="page3">
-      <div id="box2"></div>
-    </div>
-  </body>
-  <script src="./script.js"></script>
 </html>

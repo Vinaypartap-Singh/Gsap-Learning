@@ -1,39 +1,104 @@
-// gsap.to("#pageBox", {
-//   x: 700,
-//   duration: 2,
-//   delay: 2,
-//   backgroundColor: "#900",
-//   rotate: 90,
-//   scale: 1.5,
-// });
+gsap.registerPlugin(ScrollTrigger);
+// (function loco() {
+//   let locoScroll;
+//   locoScroll = new LocomotiveScroll({
+//     el: document.querySelector("#wrapper"),
+//     smooth: true,
+//     smartphone: {
+//       smooth: true,
+//     },
+//   });
+//   new ResizeObserver(() => locoScroll.update()).observe(
+//     document.querySelector("#wrapper")
+//   );
 
-// gsap.from("#pageBox", {
-//   x: 700,
-//   y: 300,
-//   duration: 2,
-//   delay: 2,
-//   backgroundColor: "#900",
-//   rotate: 90,
-//   scale: 1.5,
-// });
+//   locoScroll.on("scroll", ScrollTrigger.update);
 
-// gsap.to("#h1, #h2, #h3", {
-//   color: "#ae0000",
-//   x: 900,
-//   y: 300,
-//   duration: 2,
-//   stagger: 1,
-// });
+//   ScrollTrigger.scrollerProxy("#wrapper", {
+//     scrollTop(value) {
+//       return arguments.length
+//         ? locoScroll.scrollTo(value, 0, 0)
+//         : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//       return {
+//         top: 0,
+//         left: 0,
+//         width: window.innerWidth,
+//         height: window.innerHeight,
+//       };
+//     },
+//     pinType: document.querySelector("#wrapper").style.transform
+//       ? "transform"
+//       : "fixed",
+//   });
 
-gsap.to("#page2 h1", {
-  scale: 4,
-  opacity: 1,
-  duration: 1,
-  x: -200,
-  scrollTrigger: {
-    trigger: "#page2 h1",
-    scroller: "body",
-    scrub: 5,
-    markers: true,
+//   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+//   ScrollTrigger.refresh();
+// })();
+
+var tl = gsap.timeline();
+
+tl.to(
+  "#page1 h1",
+  {
+    scrollTrigger: {
+      trigger: "#page1 h1",
+      scroller: "body",
+      scrub: 2,
+      start: "top 30%",
+    },
+    y: -500,
+    opacity: 0,
   },
-});
+  1
+);
+
+tl.to(
+  "#page1 p",
+  {
+    scrollTrigger: {
+      trigger: "#page1 h1",
+      scroller: "body",
+      scrub: 2,
+      start: "top 30%",
+    },
+    y: -500,
+    opacity: 1,
+  },
+  1
+);
+
+tl.to(
+  "#page1",
+  {
+    scrollTrigger: {
+      trigger: "#page1",
+      scroller: "body",
+      duration: 0.5,
+      scrub: 2,
+      pin: true,
+    },
+    backgroundColor: "#FFD300",
+  },
+  1
+);
+
+tl.to(
+  "#page2 #box2",
+  {
+    scrollTrigger: {
+      trigger: "#page2",
+      scroller: "body",
+      duration: 1,
+      scrub: 2,
+      markers: true,
+      start: "top 80%",
+    },
+    y: -400,
+    opacity: 1,
+    backgroundColor: "#FFD300",
+  },
+  2
+);
